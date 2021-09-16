@@ -23,6 +23,7 @@
 		7A0FA42126DE5167002729A4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FA42026DE5167002729A4 /* ComplicationController.swift */; };
 		7A0FA42326DE5167002729A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FA42226DE5167002729A4 /* Assets.xcassets */; };
 		7A0FA42626DE5167002729A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FA42526DE5167002729A4 /* Preview Assets.xcassets */; };
+		CADA09FF26F2DF1D005E4BCA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CADA09FE26F2DF1C005E4BCA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		7A0FA42526DE5167002729A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A0FA42726DE5167002729A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0FA42826DE5167002729A4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CADA09FE26F2DF1C005E4BCA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		7A0FA3D926DE5164002729A4 = {
 			isa = PBXGroup;
 			children = (
+				CADA09FE26F2DF1C005E4BCA /* README.md */,
 				7A0FA3E426DE5164002729A4 /* Power-Up */,
 				7A0FA3F626DE5165002729A4 /* Power-UpTests */,
 				7A0FA40126DE5165002729A4 /* Power-UpUITests */,
@@ -383,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADA09FF26F2DF1D005E4BCA /* README.md in Resources */,
 				7A0FA3ED26DE5165002729A4 /* Preview Assets.xcassets in Resources */,
 				7A0FA3EA26DE5165002729A4 /* Assets.xcassets in Resources */,
 			);
