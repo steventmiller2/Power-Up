@@ -9,13 +9,15 @@ import SwiftUI
 
 @main
 struct Power_UpApp: App {
+    // Business logic
+    var workoutManager = HealthKitMetrics()
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    .environmentObject(workoutManager)
             }
         }
-
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Get the business logic from the environment.
+    @EnvironmentObject var workoutSession: HealthKitMetrics
+    
+    // Managing workout state
+    @State var workoutInProgress = false
+    
     var body: some View {
-        Text("Hello, World!")
+        Text("Beginning Workout!")
             .padding()
+            .onAppear() {
+                // Request HealthKit store authorization.
+                self.workoutSession.authorizeHealthKit()
+                workoutInProgress = true
+            }
     }
 }
 
