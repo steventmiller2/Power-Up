@@ -25,7 +25,7 @@
 		7A0FA42626DE5167002729A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FA42526DE5167002729A4 /* Preview Assets.xcassets */; };
 		7A2AA5ED27016821005D40F1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2AA5EC27016821005D40F1 /* HealthKit.framework */; };
 		7A2AA5F02701682C005D40F1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2AA5EF2701682C005D40F1 /* HealthKit.framework */; };
-		7A2AA5F72701688A005D40F1 /* HealthKitMatrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2AA5F62701688A005D40F1 /* HealthKitMatrics.swift */; };
+		7A2AA5F72701688A005D40F1 /* HealthKitMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2AA5F62701688A005D40F1 /* HealthKitMetrics.swift */; };
 		CADA09FF26F2DF1D005E4BCA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CADA09FE26F2DF1C005E4BCA /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +115,7 @@
 		7A2AA5EC27016821005D40F1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		7A2AA5EE2701682C005D40F1 /* Power-Up WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Power-Up WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		7A2AA5EF2701682C005D40F1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		7A2AA5F62701688A005D40F1 /* HealthKitMatrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitMatrics.swift; sourceTree = "<group>"; };
+		7A2AA5F62701688A005D40F1 /* HealthKitMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitMetrics.swift; sourceTree = "<group>"; };
 		CADA09FE26F2DF1C005E4BCA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,7 +233,7 @@
 				7A2AA5EE2701682C005D40F1 /* Power-Up WatchKit Extension.entitlements */,
 				7A0FA41826DE5167002729A4 /* Power_UpApp.swift */,
 				7A0FA41A26DE5167002729A4 /* ContentView.swift */,
-				7A2AA5F62701688A005D40F1 /* HealthKitMatrics.swift */,
+				7A2AA5F62701688A005D40F1 /* HealthKitMetrics.swift */,
 				7A0FA42726DE5167002729A4 /* Info.plist */,
 				7A2AA5E9270167C6005D40F1 /* Notifications and Complications */,
 				7A0FA42426DE5167002729A4 /* Preview Content */,
@@ -490,7 +490,7 @@
 				7A0FA41B26DE5167002729A4 /* ContentView.swift in Sources */,
 				7A0FA42126DE5167002729A4 /* ComplicationController.swift in Sources */,
 				7A0FA41926DE5167002729A4 /* Power_UpApp.swift in Sources */,
-				7A2AA5F72701688A005D40F1 /* HealthKitMatrics.swift in Sources */,
+				7A2AA5F72701688A005D40F1 /* HealthKitMetrics.swift in Sources */,
 				7A0FA41F26DE5167002729A4 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

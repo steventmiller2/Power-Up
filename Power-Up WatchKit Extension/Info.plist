@@ -32,6 +32,18 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Recording healthkit workout data</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Sharing healthkit workout data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Updating healthkit workout data</string>
+	<key>UIBackgroundModes</key>
+	<array/>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
 	<key>WKRunsIndependentlyOfCompanionApp</key>
 	<true/>
 </dict>
