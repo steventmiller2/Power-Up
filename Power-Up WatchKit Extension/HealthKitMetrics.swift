@@ -57,7 +57,6 @@ class HealthKitMetrics: NSObject, ObservableObject {
             healthStore.requestAuthorization(toShare: infoToShare, read: infoToRead) { (success, error) in
                 if success {
                     print("Authorization healthkit success")
-                    self.startWorkout()
                 } else if let error = error {
                     print(error)
                 }
@@ -95,6 +94,7 @@ class HealthKitMetrics: NSObject, ObservableObject {
     @Published var distance: Double = 0
     @Published var elapsedSeconds: Int = 0
     @Published var pace: Double = 0
+    @Published var workoutInProgress: NSNumber = false
 
     // MARK: - Start Workout
     func startWorkout() {
@@ -111,11 +111,14 @@ class HealthKitMetrics: NSObject, ObservableObject {
     
     // MARK: - End Workout
     /**
-     Currently not being used
+     Probably needs  update
      */
     func endWorkout() {
         // End the workout session.
+        // TODO: Requires proper protection for cases where a workout has not begun
+        workoutSession.stopActivity(with: Date())
         workoutSession.end()
+        print("Workout ended")
         cancellable?.cancel()
     }
 
@@ -192,6 +195,17 @@ class HealthKitMetrics: NSObject, ObservableObject {
 extension HealthKitMetrics: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState,
                         from fromState: HKWorkoutSessionState, date: Date) {
+        print("Workout state changed from \(fromState) to \(toState)")
+        // Pretty sure this isn't  the right way, but let's do it for now
+        if (toState == HKWorkoutSessionState.running || toState == HKWorkoutSessionState.paused) {
+            DispatchQueue.main.async {
+                self.workoutInProgress = true
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.workoutInProgress = false
+            }
+        }
     }
     func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
 

@@ -10,13 +10,17 @@ import SwiftUI
 @main
 struct Power_UpApp: App {
     // Business logic
-    var workoutManager = HealthKitMetrics()
+    @StateObject var workoutManager = HealthKitMetrics()
     
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
-                    .environmentObject(workoutManager)
+            }
+            .environmentObject(workoutManager)
+            .onAppear() {
+            // Request HealthKit store authorization
+                self.workoutManager.authorizeHealthKit()
             }
         }
     }
